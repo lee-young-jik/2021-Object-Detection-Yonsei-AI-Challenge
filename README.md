@@ -1,6 +1,6 @@
 # 2021-Object-Detection-Yonsei-AI-Challenge
-# 2021 Ai Challenge
 팀명: 천재지변 김성준
+<br>
 팀장: 전용준
 팀원: 공다흰 김성준
 주제: 캠퍼스 내 건물 인식 후 건물 설명 팝업창 띄우기
