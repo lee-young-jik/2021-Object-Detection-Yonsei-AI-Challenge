@@ -284,7 +284,6 @@ void demo(char *cfgfile, char *weightfile, float thresh, float hier_thresh, int 
             //printf("\033[1;1H");
             //printf("\nFPS:%.1f\n", fps);
             printf("Objects:\n\n");
-
             ++frame_id;
             if (demo_json_port > 0) {
                 int timeout = 400000;

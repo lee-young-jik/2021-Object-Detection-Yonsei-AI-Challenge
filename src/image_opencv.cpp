@@ -3,7 +3,7 @@
 
 #ifdef OPENCV
 #include "utils.h"
-
+#include <stdio.h> //내가 쓴  코드
 #include <cstdio>
 #include <cstdlib>
 #include <cmath>
@@ -920,7 +920,48 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
                         }
                         sprintf(buff, " (%2.0f%%)", dets[i].prob[j] * 100);
                         strcat(labelstr, buff);
-                        printf("%s: %.0f%% ", names[j], dets[i].prob[j] * 100);
+                        printf("%s: %.0f%% %d %d", names[j], dets[i].prob[j] * 100,i,j);
+
+                        float p = 0.8; //판별 기준 80프로가 넘어야지 팝업창 띄움
+
+                        if(dets[i].prob[j]>p && !strcmp("cheongsong_hall",names[j])){
+                            printf("open!");
+                            system("open /Users/jeon-yongjun/Desktop/darknet/data/building/cheongsong.png");    
+                        }
+                        else if(dets[i].prob[j]>p && !strcmp("academy",names[j])){
+                            printf("open!");
+                            system("open /Users/jeon-yongjun/Desktop/darknet/data/building/academy.png");    
+                        }
+                        else if(dets[i].prob[j]>p && !strcmp("baekwoon_hall",names[j])){
+                            printf("open!");
+                            system("open /Users/jeon-yongjun/Desktop/darknet/data/building/baekun.png");    
+                        }
+
+                         else if(dets[i].prob[j]>p && !strcmp("changjo_hall",names[j])){
+                            printf("open!");
+                            system("open /Users/jeon-yongjun/Desktop/darknet/data/building/changjo.png");    
+                        }
+
+                        else if(dets[i].prob[j]>p && !strcmp("church",names[j])){
+                            printf("open!");
+                            system("open /Users/jeon-yongjun/Desktop/darknet/data/building/church.png");    
+                        }
+                         else if(dets[i].prob[j]>p && !strcmp("jeongui_hall",names[j])){
+                            printf("open!");
+                            system("open /Users/jeon-yongjun/Desktop/darknet/data/building/jungui.png");    
+                        }
+                        else if(dets[i].prob[j]>p && !strcmp("library",names[j])){
+                            printf("open!");
+                            system("open /Users/jeon-yongjun/Desktop/darknet/data/building/library.png");    
+                        }
+                         else if(dets[i].prob[j]>p && !strcmp("mirae_hall",names[j])){
+                            printf("open!");
+                            system("open /Users/jeon-yongjun/Desktop/darknet/data/building/mirae.png");    
+                        }
+                        //if(strcmp(names[j],"yonsei_plaza"))
+		                //    system("open /Users/jeon-yongjun/Desktop/darknet/data/채/mirae2.jpg");
+                          //  system("ctrl+c");
+                            
                         if (dets[i].track_id) printf("(track = %d, sim = %f) ", dets[i].track_id, dets[i].sim);
                     }
                     else {
@@ -1015,7 +1056,7 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
 
                 cv::rectangle(*show_img, pt1, pt2, color, width, 8, 0);
                 if (ext_output)
-                    printf("\t(left_x: %4.0f   top_y: %4.0f   width: %4.0f   height: %4.0f)\n",
+                    printf("\t(left: %4.0f   top_y: %4.0f   width: %4.0f   height: %4.0f)\n",
                     (float)left, (float)top, b.w*show_img->cols, b.h*show_img->rows);
                 else
                     printf("\n");
