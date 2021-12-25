@@ -68,7 +68,7 @@
 https://pjreddie.com/darknet/yolo/https://pjreddie.com/darknet/yolo/
 <img width="60%" src="https://user-images.githubusercontent.com/78187434/147385425-47d1fc9a-8230-4cb7-b975-7d75f625ed28.png"/>
 
-# Training
+## Training
 1. 트레이닝 시작
 생성한 obj파일, cfg파일, weight파일을 이용해서 training 시작
 ./darknet detector train data/obj.data yolo-obj.cfg yolov4.conv.137
