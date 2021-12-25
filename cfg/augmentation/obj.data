@@ -1,5 +1,0 @@
-classes = 11
-train = cfg/augmentation/train.txt
-valid = cfg/augmentation/valid.txt
-names = cfg/augmentation/obj.names
-backup = /content/darknet/backup/
