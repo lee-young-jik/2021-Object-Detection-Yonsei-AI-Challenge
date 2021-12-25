@@ -100,7 +100,7 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
 
 # 만약에 이미지에 대한 팝업창을 띄우고 싶다면 image.c 파일을 수정해주면 된다. ==> 수정 후 다시 디버깅<br>
 
-## 결과 
+### 결과 
 <img width="60%" src="https://user-images.githubusercontent.com/78187434/147386610-78d8aea0-7dc7-4d44-b8b9-5a30192c6179.png"/>
 
 # 새로운 건물 데이터에 대해서 90% 이상의 정확도를 보여준다
