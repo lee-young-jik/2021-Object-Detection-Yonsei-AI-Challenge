@@ -18,7 +18,7 @@
 ## Challenge
 웹캠을 이용한 실시간 건물 탐지
 
-# Data Set
+## Data Set
 - 스포츠센터
 - 연세 플라자
 - 대학 본부
@@ -71,11 +71,11 @@ https://pjreddie.com/darknet/yolo/https://pjreddie.com/darknet/yolo/
 1. 트레이닝 시작
 생성한 obj파일, cfg파일, weight파일을 이용해서 training 시작
 ./darknet detector train data/obj.data yolo-obj.cfg yolov4.conv.137
-## 본인이 저장해 놓은 obj.data, cfg파일, weight파일 경로로 수정해서 명령어 실행
+# 본인이 저장해 놓은 obj.data, cfg파일, weight파일 경로로 수정해서 명령어 실행
 
 2. 전이학습 
 ./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg /content/darknet/backup/custom-yolov4-detector_last.weights
-## 이전에 학습해놓은 weight파일을 이용해서 연속적으로 학습을 진행
+# 이전에 학습해놓은 weight파일을 이용해서 연속적으로 학습을 진행
 
 ## Detect
 # 동영상 탐지 ==> 
@@ -94,7 +94,7 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
 <img width="70%" src="https://user-images.githubusercontent.com/78187434/147386425-b38d08d1-5380-498e-a5ff-be788930a7b7.png"/>
 탐지한 클래스가 80% 이상일 경우 해당 건물에 대한 팝업창을 출력
 
-## 만약에 이미지에 대한 팝업창을 띄우고 싶다면 image.c 파일을 수정해주면 된다. ==> 수정 후 다시 디버깅
+# 만약에 이미지에 대한 팝업창을 띄우고 싶다면 image.c 파일을 수정해주면 된다. ==> 수정 후 다시 디버깅
 
 ## 결과 
 <img width="60%" src="https://user-images.githubusercontent.com/78187434/147386610-78d8aea0-7dc7-4d44-b8b9-5a30192c6179.png"/>
