@@ -4,7 +4,7 @@
 팀장: 전용준 <br>
 팀원: 공다흰 김성준 <br>
 주제: 캠퍼스 내 건물 인식 후 건물 설명 팝업창 띄우기
-# Supervised and helped by C-J Lee, S-R Hwang, and H-U Yoon
+### Supervised and helped by C-J Lee, S-R Hwang, and H-U Yoon
 ## 목차
 1. Labeling
 2. Training 방법
