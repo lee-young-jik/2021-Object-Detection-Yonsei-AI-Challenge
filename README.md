@@ -41,16 +41,25 @@ Macbook Air m1
 
 # Training Setup
 1. cfg 파일을 메모장으로 열기
+
 2. yolo검색 후 classes 개수만큼 값을 변경
 <img width="50%" src="https://user-images.githubusercontent.com/78187434/147383298-c7a2e47e-41d6-4d3c-a7b9-71751f5d8880.png"/>
+
 3. yolo 바로 위 convolution에서 filter값을 (클래스 개수 + 5) * 3 로 수정
 <img width="50%" src="https://user-images.githubusercontent.com/78187434/147383333-df26dad4-15f1-41c4-bb20-ddd3902b312b.png"/>
+
 4. max_batches 값을 클래스 개수 * 2000 로 수정
 <img width="20%" src="https://user-images.githubusercontent.com/78187434/147383406-d23ae286-daba-46b4-ba10-e7cea475dc05.png"/>
+
 5. steps 값을 max_batches값의 80%,90% 로 수정
 <img width="20%" src="https://user-images.githubusercontent.com/78187434/147383445-ca660968-c618-4087-b0ed-42359a2790ac.png"/>
 
+6. obj.names 파일 수정 ==> labeling class 순서대로 작성
+<img width="40%" src="https://user-images.githubusercontent.com/78187434/147383975-1b94f507-1f46-4725-a474-8af194fed3e6.png"/>
+
+7. obj.data 파일 수정 ==> 클래스 개수와, train, valid txt파일의 위치 수정 
+<img width="40%" src="https://user-images.githubusercontent.com/78187434/147384071-18e8bdb3-0ac4-4bf1-a0ca-1c3fbeadccaa.png"/>
+
 # Training
-1. obj.names 파일 수정
-<img width="20%" src="https://user-images.githubusercontent.com/78187434/147383975-1b94f507-1f46-4725-a474-8af194fed3e6.png"/>
+
 
