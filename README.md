@@ -39,7 +39,7 @@ Macbook Air m1
 8. 데이터 위치와 저장경로를 변경함 (같은 위치에 하는것이 좋음)
 <img width="80%" src="https://user-images.githubusercontent.com/78187434/147383186-dabc202f-a352-41bc-8ee7-7cd48a02e711.png"/>
 
-# Training
+# Training Setup
 1. cfg 파일을 메모장으로 열기
 2. yolo검색 후 classes 개수만큼 값을 변경
 <img width="50%" src="https://user-images.githubusercontent.com/78187434/147383298-c7a2e47e-41d6-4d3c-a7b9-71751f5d8880.png"/>
@@ -49,4 +49,8 @@ Macbook Air m1
 <img width="20%" src="https://user-images.githubusercontent.com/78187434/147383406-d23ae286-daba-46b4-ba10-e7cea475dc05.png"/>
 5. steps 값을 max_batches값의 80%,90% 로 수정
 <img width="20%" src="https://user-images.githubusercontent.com/78187434/147383445-ca660968-c618-4087-b0ed-42359a2790ac.png"/>
+
+# Training
+1. obj.names 파일 수정
+<img width="20%" src="https://user-images.githubusercontent.com/78187434/147383975-1b94f507-1f46-4725-a474-8af194fed3e6.png"/>
 
