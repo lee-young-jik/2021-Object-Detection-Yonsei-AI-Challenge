@@ -69,37 +69,37 @@ https://pjreddie.com/darknet/yolo/https://pjreddie.com/darknet/yolo/
 <img width="60%" src="https://user-images.githubusercontent.com/78187434/147385425-47d1fc9a-8230-4cb7-b975-7d75f625ed28.png"/>
 
 ## Training
-1. 트레이닝 시작
-생성한 obj파일, cfg파일, weight파일을 이용해서 training 시작
-./darknet detector train data/obj.data yolo-obj.cfg yolov4.conv.137
-# 본인이 저장해 놓은 obj.data, cfg파일, weight파일 경로로 수정해서 명령어 실행
+1. 트레이닝 시작<br>
+생성한 obj파일, cfg파일, weight파일을 이용해서 training 시작<br>
+./darknet detector train data/obj.data yolo-obj.cfg yolov4.conv.137 <br>
+본인이 저장해 놓은 obj.data, cfg파일, weight파일 경로로 수정해서 명령어 실행<br>
 
-2. 전이학습 
-./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg /content/darknet/backup/custom-yolov4-detector_last.weights
-# 이전에 학습해놓은 weight파일을 이용해서 연속적으로 학습을 진행
+2. 전이학습 <br>
+./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg /content/darknet/backup/custom-yolov4-detector_last.weights<br>
+이전에 학습해놓은 weight파일을 이용해서 연속적으로 학습을 진행<br>
 
 ## Detect
-# 동영상 탐지 ==> 
-./darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights data/video/library.mp4
-본인의 obj.data cfg weight 탐지할 데이터 파일의 경로로 수정해서 사용
+# 동영상 탐지 <br>
+./darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights data/video/library.mp4<br>
+# 본인의 obj.data cfg weight 탐지할 데이터 파일의 경로로 수정해서 사용<br>
 
-# 이미지 탐지
-./darknet detector test cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights data/채/academy.jpg
+# 이미지 탐지<br>
+./darknet detector test cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights data/채/academy.jpg<br>
 
-# 웹캠 이용
-darknet detector demo cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights -c 0
+# 웹캠 이용<br>
+darknet detector demo cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights -c 0<br>
 
-## 팝업창 코드 설명
-1.image_opencv.cpp파일 
-extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, float thresh, char **names, image **alphabet, int classes, int ext_output) 함수를 수정함
-<img width="70%" src="https://user-images.githubusercontent.com/78187434/147386425-b38d08d1-5380-498e-a5ff-be788930a7b7.png"/>
-탐지한 클래스가 80% 이상일 경우 해당 건물에 대한 팝업창을 출력
+## 팝업창 코드 설명<br>
+1.image_opencv.cpp파일 <br>
+extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, float thresh, char **names, image **alphabet, int classes, int ext_output) 함수를 수정함<br>
+<img width="70%" src="https://user-images.githubusercontent.com/78187434/147386425-b38d08d1-5380-498e-a5ff-be788930a7b7.png"/><br>
+탐지한 클래스가 80% 이상일 경우 해당 건물에 대한 팝업창을 출력<br>
 
-# 만약에 이미지에 대한 팝업창을 띄우고 싶다면 image.c 파일을 수정해주면 된다. ==> 수정 후 다시 디버깅
+# 만약에 이미지에 대한 팝업창을 띄우고 싶다면 image.c 파일을 수정해주면 된다. ==> 수정 후 다시 디버깅<br>
 
 ## 결과 
 <img width="60%" src="https://user-images.githubusercontent.com/78187434/147386610-78d8aea0-7dc7-4d44-b8b9-5a30192c6179.png"/>
 
 ## Reference
-https://github.com/AlexeyAB/darknet#custom-object-detection
+https://github.com/AlexeyAB/darknet#custom-object-detection<br>
 https://deep-eye.tistory.com/53
