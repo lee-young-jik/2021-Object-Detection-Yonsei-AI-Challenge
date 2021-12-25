@@ -60,6 +60,10 @@ Macbook Air m1
 7. obj.data 파일 수정 ==> 클래스 개수와, train, valid txt파일의 위치 수정 
 <img width="40%" src="https://user-images.githubusercontent.com/78187434/147384071-18e8bdb3-0ac4-4bf1-a0ca-1c3fbeadccaa.png"/>
 
+8. Weight File 다운로드 ==> tiny wolo weight 파일 다운로드
+https://pjreddie.com/darknet/yolo/https://pjreddie.com/darknet/yolo/
+<img width="60%" src="https://user-images.githubusercontent.com/78187434/147385425-47d1fc9a-8230-4cb7-b975-7d75f625ed28.png"/>
+
 # Training
 
 
