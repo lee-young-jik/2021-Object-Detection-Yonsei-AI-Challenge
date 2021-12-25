@@ -1,0 +1,39 @@
+darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights data/video/library.mp4
+
+darknet detector demo cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights data/video/academy.mp4
+
+augmentation cfg ==>
+darknet detector test cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights data/채/academy.jpg
+
+darknet detector test cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights data/채/academy.jpg
+
+json 보내기==>
+darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights data/video/library.mp4 -json_port 5500
+
+darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights data/video/academy.mp4 -json_port 5700 -mjpeg_port 5600 -ext_output<== 5600 포트로 가면 detect하는거 볼 수 있음
+
+웹캠
+==> darknet detector demo cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights -c 0
+
+darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights -c 0
+
+darknet detector demo cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights -c 0 -json_port 5500
+
+
+
+
+
+
+yolo_console_dll.exe cfg/augmentation/obj.data cfg/augmentation/custom-yolov4-detector.cfg cfg/augmentation/custom-yolov4-detector_last.weights /data/채/academy.mp4
+
+
+
+
+#프로젝트 코드
+
+darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights -c 0
+
+darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights -c 1 <== 휴대폰 웹캠으로 연결
+
+
+darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights data/video/church.mp4
