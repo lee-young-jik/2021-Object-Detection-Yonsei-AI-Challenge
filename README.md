@@ -79,6 +79,9 @@ https://pjreddie.com/darknet/yolo/https://pjreddie.com/darknet/yolo/
 이전에 학습해놓은 weight파일을 이용해서 연속적으로 학습을 진행<br>
 
 ## Detect
+### weight 파일 다운로드 (Yonsei 계정으로 접속해야 다운로드 가능합니다)<br>
+https://drive.google.com/file/d/1UlTw_5hbfAx5hHGg5MehXO8ZcqVD2JLb/view?usp=sharing
+
 # 동영상 탐지 <br>
 ./darknet detector demo cfg/obj.data cfg/custom-yolov4-detector.cfg cfg/custom-yolov4-detector_90_weight_file.weights data/video/library.mp4<br>
 # 본인의 obj.data cfg weight 탐지할 데이터 파일의 경로로 수정해서 사용<br>
