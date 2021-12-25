@@ -10,6 +10,7 @@
 2. Training 방법
 3. Detect 방법
 4. 팝업창 띄우기 
+5. Reference
 
 ## 실행 환경
 - Macbook Air m1 
